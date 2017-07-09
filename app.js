@@ -26,6 +26,6 @@ app.post("/foo", function(req, res, next) {
 });
 
 
-server.listen(port,function(){
-console.log('Listening on port' + port);
+server.listen(app.get('port'),function(){
+ console.log('Node app is running on port', app.get('port'));
 });
