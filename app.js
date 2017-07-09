@@ -17,6 +17,10 @@ console.log('about to send message!');
 	});
 });
 
+app.get('/', function(req, res) {
+  res.send("Hello World");
+});
+
 
 app.post("/foo", function(req, res, next) {
     io.sockets.emit('message-from-server',{
